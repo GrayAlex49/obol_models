@@ -8,10 +8,10 @@ library(crypto)
 # This takes a while so I've saved it out 
 raw.data <- getCoins()
 
+saveRDS(raw.data, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_rawData.RDS' ))
+
 info <- raw.data %>%
   distinct(symbol, name, ranknow)
-
-saveRDS(raw.data, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_rawData.RDS' ))
 
 write_csv(info, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_symbolInfo.csv' ))
 
@@ -22,6 +22,16 @@ data <- raw.data %>%
   unite(key, symbol, key) %>%
   spread(key, value) %>%
   arrange(date)
+
+trends <- gtrendsR::gtrends(c("Bitcoin", "Ethereum", "Litecoin", "Coinbase", "Cryptocurrency")) 
+
+trends <- data.frame(trends$interest_over_time) %>% 
+  mutate(date = as.Date(date)) %>% 
+  select(date, keyword, hits) %>% 
+  mutate(keyword = paste0('google_', tolower(keyword))) %>% 
+  spread(keyword, hits)
+
+data <- left_join(data, trends, by = 'date')
 
 saveRDS(data, paste0('./data/',format(max(data$date), "%Y_%m%d"), '_modelDataset.RDS' ))
 
