@@ -1,0 +1,1436 @@
+symbol,name,ranknow
+BTC,Bitcoin,1
+ETH,Ethereum,2
+XRP,Ripple,3
+BCH,Bitcoin Cash,4
+ADA,Cardano,5
+LTC,Litecoin,6
+NEO,NEO,7
+XEM,NEM,8
+XLM,Stellar,9
+MIOTA,IOTA,10
+DASH,Dash,11
+EOS,EOS,12
+XMR,Monero,13
+TRX,TRON,14
+BTG,Bitcoin Gold,15
+ETC,Ethereum Classic,16
+QTUM,Qtum,17
+ICX,ICON,18
+LSK,Lisk,19
+XRB,RaiBlocks,20
+USDT,Tether,21
+OMG,OmiseGO,22
+SC,Siacoin,23
+ZEC,Zcash,24
+STRAT,Stratis,25
+PPT,Populous,26
+ARDR,Ardor,27
+BNB,Binance Coin,28
+VEN,VeChain,29
+XVG,Verge,30
+BCN,Bytecoin,31
+SNT,Status,32
+STEEM,Steem,33
+KCS,KuCoin Shares,34
+BTS,BitShares,35
+DOGE,Dogecoin,36
+WAVES,Waves,37
+ZRX,0x,38
+SMART,SmartCash,39
+REP,Augur,40
+DRGN,Dragonchain,41
+ETN,Electroneum,42
+VERI,Veritaseum,43
+DGB,DigiByte,44
+SALT,SALT,45
+KMD,Komodo,46
+QASH,QASH,47
+ARK,Ark,48
+DCN,Dentacoin,49
+DCR,Decred,50
+GAS,Gas,51
+GNT,Golem,52
+PIVX,PIVX,53
+HSR,Hshare,54
+LRC,Loopring,55
+RHOC,RChain,56
+ETHOS,Ethos,57
+WTC,Walton,58
+BAT,Basic Attention Token,59
+GBYTE,Byteball Bytes,60
+WAX,WAX,61
+DENT,Dent,62
+ZCL,ZClassic,63
+KNC,Kyber Network,64
+NEBL,Neblio,65
+DGD,DigixDAO,66
+AE,Aeternity,67
+AION,Aion,68
+FUN,FunFair,69
+FCT,Factom,70
+NXS,Nexus,71
+MONA,MonaCoin,72
+BTM,Bytom,73
+SYS,Syscoin,74
+MAID,MaidSafeCoin,75
+ELF,aelf,76
+POWR,Power Ledger,77
+GXS,GXShares,78
+REQ,Request Network,79
+RDD,ReddCoin,80
+XZC,ZCoin,81
+NXT,Nxt,82
+KIN,Kin,83
+CNX,Cryptonex,84
+GAME,GameCredits,85
+MED,MediBloc,86
+SUB,Substratum,87
+ENG,Enigma,88
+BTX,Bitcore,89
+PART,Particl,90
+BNT,Bancor,91
+NAS,Nebulas,92
+QSP,Quantstamp,93
+PAY,TenX,94
+XDN,DigitalNote,95
+XP,Experience Points,96
+EMC,Emercoin,97
+ICN,Iconomi,98
+LINK,ChainLink,99
+CVC,Civic,100
+SKY,Skycoin,101
+BTCD,BitcoinDark,102
+PAC,PACcoin,103
+GNO,Gnosis,104
+RDN,Raiden Network Token,105
+XPA,XPlay,106
+DEW,DEW,107
+PLR,Pillar,108
+BCO,BridgeCoin,109
+NAV,NAV Coin,110
+BLOCK,Blocknet,111
+COB,Cobinhood,112
+PPP,PayPie,113
+VTC,Vertcoin,114
+SAN,Santiment Network Token,115
+POE,Po.et,116
+BIX,Bibox Token,117
+SRN,SIRIN LABS Token,118
+EDG,Edgeless,119
+STORJ,Storj,120
+R,Revain,121
+RLC,iExec RLC,122
+TNB,Time New Bank,123
+AST,AirSwap,124
+XBY,XTRABYTES,125
+APPC,AppCoins,126
+ENJ,Enjin Coin,127
+UBQ,Ubiq,128
+MCO,Monaco,129
+LEND,ETHLend,130
+VEE,BLOCKv,131
+ACT,Achain,132
+QRL,Quantum Resistant Ledger,133
+STORM,Storm,134
+UTK,UTRUST,135
+RPX,Red Pulse,136
+BCC,BitConnect,137
+RCN,Ripio Credit Network,138
+INS,INS Ecosystem,139
+DTR,Dynamic Trading Rights,140
+MANA,Decentraland,141
+WABI,WaBi,142
+DBC,DeepBrain Chain,143
+PPC,Peercoin,144
+OST,Simple Token,145
+VIBE,VIBE,146
+SPANK,SpankChain,147
+UNITY,SuperNET,148
+XCP,Counterparty,149
+ZEN,ZenCash,150
+DATA,Streamr DATAcoin,151
+SNGLS,SingularDTV,152
+QLC,QLINK,153
+EMC2,Einsteinium,154
+CMT,CyberMiles,155
+BAY,BitBay,156
+ANT,Aragon,157
+WGR,Wagerr,158
+SNM,SONM,159
+NLG,Gulden,160
+FUEL,Etherparty,161
+ADX,AdEx,162
+ITC,IoT Chain,163
+ETP,Metaverse ETP,164
+VIA,Viacoin,165
+LBC,LBRY Credits,166
+TRIG,Triggers,167
+UKG,Unikoin Gold,168
+CND,Cindicator,169
+BURST,Burst,170
+MGO,MobileGo,171
+MOD,Modum,172
+CTR,Centra,173
+WINGS,Wings,174
+HVN,Hive,175
+NULS,Nuls,176
+ATM,ATMChain,177
+DNT,district0x,178
+LKK,Lykke,179
+TAU,Lamden,180
+NGC,NAGA,181
+CLOAK,CloakCoin,182
+HST,Decision Token,183
+AMB,Ambrosus,184
+MNX,MinexCoin,185
+PRL,Oyster,186
+AGRS,Agoras Tokens,187
+BRD,Bread,188
+EDO,Eidoo,189
+RISE,Rise,190
+MLN,Melon,191
+CAT,BitClave,192
+MTL,Metal,193
+TNT,Tierion,194
+GRID,Grid+,195
+THC,HempCoin,196
+PURA,Pura,197
+AEON,Aeon,198
+DCT,DECENT,199
+1ST,FirstBlood,200
+IOC,I/O Coin,201
+XAS,Asch,202
+TRST,WeTrust,203
+GTO,Gifto,204
+MDS,MediShares,205
+TKN,TokenCard,206
+GVT,Genesis Vision,207
+IXT,iXledger,208
+LUN,Lunyr,209
+CFI,Cofound.it,210
+VOX,Voxels,211
+MOON,Mooncoin,212
+CDT,CoinDash,213
+PRS,Presearch,214
+COSS,COSS,215
+TIO,Trade Token,216
+NMC,Namecoin,217
+FTC,Feathercoin,218
+MTH,Monetha,219
+XNN,Xenon,220
+SHIFT,Shift,221
+PAYX,Paypex,222
+TAAS,TaaS,223
+BITCNY,bitCNY,224
+CRW,Crown,225
+GRS,Groestlcoin,226
+DLT,Agrello,227
+SLS,SaluS,228
+ADT,adToken,229
+LA,LAToken,230
+EVX,Everex,231
+SAFEX,Safe Exchange Coin,232
+XSPEC,Spectrecoin,233
+DAT,Datum,234
+INK,Ink,235
+VIB,Viberate,236
+WRC,Worldcore,237
+POT,PotCoin,238
+BLT,Bloom,239
+DRT,DomRaider,240
+DMD,Diamond,241
+XWC,WhiteCoin,242
+PEPECASH,Pepe Cash,243
+ION,ION,244
+ECC,ECC,245
+HMQ,Humaniq,246
+SLR,SolarCoin,247
+FAIR,FairCoin,248
+NSR,NuShares,249
+ECN,E-coin,250
+PASC,Pascal Coin,251
+YOYOW,YOYOW,252
+NLC2,NoLimitCoin,253
+SNC,SunContract,254
+SIB,SIBCoin,255
+ORME,Ormeus Coin,256
+XEL,Elastic,257
+DPY,Delphy,258
+AMP,Synereo,259
+SNOV,Snovio,260
+GUP,Matchpool,261
+VOISE,Voise,262
+ONION,DeepOnion,263
+DBIX,DubaiCoin,264
+MSP,Mothership,265
+ZSC,Zeusshield,266
+NET,Nimiq,267
+MER,Mercury,268
+JINN,Jinn,269
+GRC,GridCoin,270
+BLK,BlackCoin,271
+FLASH,Flash,272
+NEU,Neumark,273
+PHR,Phore,274
+NYC,NewYorkCoin,275
+AIR,AirToken,276
+DIVX,Divi,277
+TIX,Blocktix,278
+DIME,Dimecoin,279
+BNTY,Bounty0x,280
+DOVU,Dovu,281
+VRC,VeriCoin,282
+GOLOS,Golos,283
+ARN,Aeron,284
+MDA,Moeda Loyalty Points,285
+EXP,Expanse,286
+TGT,Target Coin,287
+DNA,EncrypGen,288
+RVT,Rivetz,289
+BOT,Bodhi,290
+NMR,Numeraire,291
+STX,Stox,292
+CREDO,Credo,293
+RC,RussiaCoin,294
+BITUSD,bitUSD,295
+ATB,ATBCoin,296
+OK,OKCash,297
+BIS,Bismuth,298
+BCPT,BlockMason Credit Protocol,299
+OTN,Open Trading Network,300
+PND,Pandacoin,301
+BITB,Bean Cash,302
+DBET,DecentBet,303
+RADS,Radium,304
+MUE,MonetaryUnit,305
+ALQO,ALQO,306
+ART,Maecenas,307
+PRO,Propy,308
+PPY,Peerplays,309
+OMNI,Omni,310
+MYB,MyBit Token,311
+LIFE,LIFE,312
+HUSH,Hush,313
+NEOS,NeosCoin,314
+RBY,Rubycoin,315
+PKT,Playkey,316
+NXC,Nexium,317
+ALIS,ALIS,318
+XSH,SHIELD,319
+POLL,ClearPoll,320
+LEO,LEOcoin,321
+BMC,Blackmoon Crypto,322
+ZOI,Zoin,323
+BQ,bitqy,324
+GBX,GoByte,325
+NVST,NVO,326
+ODN,Obsidian,327
+WCT,Waves Community Token,328
+XRL,Rialto,329
+XMY,Myriad,330
+UNO,Unobtanium,331
+KICK,KickCoin,332
+OXY,Oxycoin,333
+SEQ,Sequence,334
+NTRN,Neutron,335
+SBD,Steem Dollars,336
+BBR,Boolberry,337
+FLO,FlorinCoin,338
+CAG,Change,339
+PRG,Paragon,340
+HDG,Hedge,341
+OAX,OAX,342
+DTB,Databits,343
+SOAR,Soarcoin,344
+PTOY,Patientory,345
+BLUE,BLUE,346
+MINT,Mintcoin,347
+COLX,ColossusCoinXT,348
+XAUR,Xaurum,349
+ENRG,Energycoin,350
+SWT,Swarm City,351
+AC,AsiaCoin,352
+CRED,Verify,353
+INCNT,Incent,354
+GAM,Gambit,355
+ELIX,Elixir,356
+ICOS,ICOS,357
+NIO,Autonio,358
+MUSIC,Musicoin,359
+LUX,LUXCoin,360
+POSW,PoSW Coin,361
+FLDC,FoldingCoin,362
+IFT,InvestFeed,363
+COVAL,Circuits of Value,364
+FLIXX,Flixxo,365
+CSNO,BitDice,366
+BSD,BitSend,367
+CLAM,Clams,368
+LMC,LoMoCoin,369
+PBL,Publica,370
+XMCC,Monoeci,371
+ONG,onG.social,372
+SPF,SportyFi,373
+BWK,Bulwark,374
+TIME,Chronobank,375
+OCT,OracleChain,376
+PST,Primas,377
+GCR,Global Currency Reserve,378
+LOC,LockChain,379
+LINDA,Linda,380
+BCY,Bitcrystals,381
+CAT,BlockCAT,382
+QUN,QunQun,383
+TIPS,FedoraCoin,384
+GEO,GeoCoin,385
+ABY,ArtByte,386
+FRST,FirstCoin,387
+PLBT,Polybius,388
+PIRL,Pirl,389
+QAU,Quantum,390
+ATMS,Atmos,391
+XST,Stealthcoin,392
+XLR,Solaris,393
+HEAT,HEAT,394
+GMT,Mercury Protocol,395
+RMC,Russian Miner Coin,396
+ECOB,Ecobit,397
+PFR,Payfair,398
+AVT,Aventus,399
+BET,DAO.Casino,400
+IOP,Internet of People,401
+CVCOIN,CVCoin,402
+PINK,PinkCoin,403
+MYST,Mysterium,404
+OBITS,OBITS,405
+BDL,Bitdeal,406
+MAG,Magnet,407
+PLU,Pluton,408
+ATL,ATLANT,409
+USNBT,NuBits,410
+DICE,Etheroll,411
+INN,Innova,412
+XVC,Vcash,413
+UFO,UFO Coin,414
+SUMO,Sumokoin,415
+EAC,EarthCoin,416
+TIE,TIES Network,417
+SEND,Social Send,418
+XPM,Primecoin,419
+XUC,Exchange Union,420
+PRO,ProChain,421
+UNIT,Universal Currency,422
+HGT,HelloGold,423
+VSX,Vsync,424
+CURE,Curecoin,425
+ESP,Espers,426
+PURE,Pure,427
+FYP,FlypMe,428
+REC,Regalcoin,429
+SPHR,Sphere,430
+CRC,CrowdCoin,431
+WISH,MyWish,432
+KLC,KiloCoin,433
+XTO,Tao,434
+HKN,Hacken,435
+BON,Bonpay,436
+PLAY,HEROcoin,437
+BTM,Bitmark,438
+PIX,Lampix,439
+ASTRO,Astro,440
+TZC,TrezarCoin,441
+TCC,The ChampCoin,442
+EMV,Ethereum Movie Venture,443
+CRB,Creditbit,444
+MEME,Memetic / PepeCoin,445
+SPR,SpreadCoin,446
+WILD,Wild Crypto,447
+DOPE,DopeCoin,448
+B2B,B2B,449
+QWARK,Qwark,450
+ADC,AudioCoin,451
+ETT,EncryptoTel [WAVES],452
+TX,TransferCoin,453
+ALT,Altcoin,454
+PZM,PRIZM,455
+NVC,Novacoin,456
+BELA,Bela,457
+SYNX,Syndicate,458
+BTDX,Bitcloud,459
+VIVO,VIVO,460
+HYP,HyperStake,461
+MTNC,Masternodecoin,462
+OPT,Opus,463
+TFL,TrueFlip,464
+GLD,GoldCoin,465
+XBC,Bitcoin Plus,466
+DOT,Dotcoin,467
+BLITZ,Blitzcash,468
+DRP,DCORP,469
+UFR,Upfiring,470
+ITNS,IntenseCoin,471
+AUR,Auroracoin,472
+EDR,E-Dinar Coin,473
+BRK,Breakout,474
+ZNY,Bitzeny,475
+SPRTS,Sprouts,476
+ADST,AdShares,477
+RIC,Riecoin,478
+TOA,ToaCoin,479
+VRM,VeriumReserve,480
+HWC,HollyWoodCoin,481
+PTC,Pesetacoin,482
+BPL,Blockpool,483
+AHT,Bowhead,484
+DAI,Dai,485
+CANN,CannabisCoin,486
+KORE,Kore,487
+SNRG,Synergy,488
+REX,REX,489
+FRD,Farad,490
+PDC,Project Decorum,491
+VSL,vSlice,492
+IND,Indorse Token,493
+ZER,Zero,494
+CRAVE,Crave,495
+STA,Starta,496
+CHC,ChainCoin,497
+SXC,Sexcoin,498
+BRX,Breakout Stake,499
+BUZZ,BuzzCoin,500
+CREA,Creativecoin,501
+EXCL,ExclusiveCoin,502
+SSS,Sharechain,503
+XGOX,XGOX,504
+2GIVE,2GIVE,505
+SCL,Social,506
+VTR,vTorrent,507
+HBT,Hubii Network,508
+BTCZ,BitcoinZ,509
+DGPT,DigiPulse,510
+RUP,Rupee,511
+EQT,EquiTrader,512
+INXT,Internxt,513
+EGC,EverGreenCoin,514
+PRIX,Privatix,515
+ZRC,ZrCoin,516
+1337,1337,517
+IXC,Ixcoin,518
+ERO,Eroscoin,519
+REAL,REAL,520
+PYLNT,Pylon Network,521
+TKS,Tokes,522
+EBTC,eBitcoin,523
+BASH,LuckChain,524
+ERC,EuropeCoin,525
+RKC,Royal Kingdom Coin,526
+TRUST,TrustPlus,527
+START,Startcoin,528
+ADL,Adelphoi,529
+CDX,Commodity Ad Network,530
+TRC,Terracoin,531
+WAND,WandX,532
+CARBON,Carboncoin,533
+EFYT,Ergo,534
+XFT,Footy Cash,535
+PING,CryptoPing,536
+FOR,FORCE,537
+BBT,BitBoost,538
+NOTE,DNotes,539
+ELLA,Ellaism,540
+MBRS,Embers,541
+GOOD,Goodomy,542
+PUT,PutinCoin,543
+EBST,eBoost,544
+APX,APX,545
+QRK,Quark,546
+ETBS,Ethbits,547
+KRB,Karbo,548
+ELTCOIN,ELTCOIN,549
+SMART,SmartBillions,550
+DYN,Dynamic,551
+WDC,WorldCoin,552
+CHIPS,CHIPS,553
+XMG,Magi,554
+NDC,NEVERDIE,555
+PROC,ProCurrency,556
+ZEPH,Zephyr,557
+GRE,Greencoin,558
+STU,bitJob,559
+ANC,Anoncoin,560
+GCN,GCoin,561
+NOBL,NobleCoin,562
+EFL,e-Gulden,563
+GCC,TheGCCcoin,564
+DNR,Denarius,565
+HOLD,Interstellar Holdings,566
+RAIN,Condensate,567
+BLU,BlueCoin,568
+PKB,ParkByte,569
+MCAP,MCAP,570
+LDOGE,LiteDoge,571
+HUC,HunterCoin,572
+MONK,Monkey Project,573
+CTX,CarTaxi Token,574
+HAL,Halcyon,575
+MXT,MarteXcoin,576
+FLT,FlutterCoin,577
+YOC,Yocoin,578
+ABJ,Abjcoin,579
+PBT,Primalbase Token,580
+DAR,Darcrus,581
+RIYA,Etheriya,582
+CNT,Centurion,583
+CBX,Crypto Bullion,584
+DP,DigitalPrice,585
+RNS,Renos,586
+STAK,STRAKS,587
+QVT,Qvolta,588
+GIM,Gimli,589
+ZEIT,Zeitcoin,590
+V,Version,591
+ITT,Intelligent Trading Tech,592
+ECASH,Ethereum Cash,593
+ARC,ArcticCoin,594
+EPY,Emphy,595
+LINX,Linx,596
+UNIFY,Unify,597
+BRO,Bitradio,598
+ERC20,ERC20,599
+INSN,InsaneCoin,600
+POP,PopularCoin,601
+OCL,Oceanlab,602
+MEC,Megacoin,603
+FLIK,FLiK,604
+DFT,DraftCoin,605
+CRM,Cream,606
+KLN,Kolion,607
+BTA,Bata,608
+BTCS,Bitcoin Scrypt,609
+NET,NetCoin,610
+XCPO,Copico,611
+ADZ,Adzcoin,612
+MAC,Machinecoin,613
+FYN,FundYourselfNow,614
+42,42-coin,615
+MOIN,Moin,616
+HAT,Hawala.Today,617
+CDN,Canada eCoin,618
+DCY,Dinastycoin,619
+RUSTBITS,Rustbits,620
+XCN,Cryptonite,621
+FJC,FujiCoin,622
+VIDZ,PureVidz,623
+CFT,CryptoForecast,624
+ACC,Accelerator Network,625
+MZC,MazaCoin,626
+DSR,Desire,627
+AU,AurumCoin,628
+ELE,Elementrem,629
+SIFT,Smart Investment Fund Token,630
+SCORE,Scorecoin,631
+UIS,Unitus,632
+CMPCO,CampusCoin,633
+ALTCOM,AltCommunity Coin,634
+UNB,UnbreakableCoin,635
+ECA,Electra,636
+MRT,Miners' Reward Token,637
+INFX,Influxcoin,638
+LGD,Legends Room,639
+STN,Steneum Coin,640
+CCRB,CryptoCarbon,641
+ICOO,ICO OpenLedger,642
+MBI,Monster Byte,643
+UTC,UltraCoin,644
+IFLT,InflationCoin,645
+ORB,Orbitcoin,646
+SAGA,SagaCoin,647
+ETG,Ethereum Gold,648
+BYC,Bytecent,649
+ZET,Zetacoin,650
+FUCK,FuckToken,651
+ZENI,Zennies,652
+BBP,BiblePay,653
+TES,TeslaCoin,654
+TRCT,Tracto,655
+GRWI,Growers International,656
+AMS,AmsterdamCoin,657
+DGC,Digitalcoin,658
+TKR,CryptoInsight,659
+KEK,KekCoin,660
+HODL,HOdlcoin,661
+DFS,DFSCoin,662
+SMC,SmartCoin,663
+FST,Fastcoin,664
+BTCR,Bitcurrency,665
+FC2,FuelCoin,666
+CCO,Ccore,667
+NETKO,Netko,668
+SKIN,SkinCoin,669
+ATS,Authorship,670
+ACE,Ace,671
+MCRN,MACRON,672
+CPC,Capricoin,673
+DEM,Deutsche eMark,674
+XIOS,Xios,675
+SDC,ShadowCash,676
+KURT,Kurrent,677
+BTB,BitBar,678
+ATOM,Atomic Coin,679
+TROLL,Trollcoin,680
+BLC,Blakecoin,681
+Q2C,QubitCoin,682
+XCXT,CoinonatX,683
+CFD,Confido,684
+BTCRED,Bitcoin Red,685
+PIPL,PiplCoin,686
+EL,Elcoin,687
+MAX,MaxCoin,688
+GUN,Guncoin,689
+TRI,Triangles,690
+EBET,EthBet,691
+WGO,WavesGo,692
+JET,Jetcoin,693
+GAIA,GAIA,694
+IETH,iEthereum,695
+SMLY,SmileyCoin,696
+MNE,Minereum,697
+SGR,Sugar Exchange,698
+ITI,iTicoin,699
+FCN,Fantomcoin,700
+KOBO,Kobocoin,701
+XPTX,PlatinumBAR,702
+PHS,Philosopher Stones,703
+BITS,Bitstar,704
+DAXX,DaxxCoin,705
+VLT,Veltor,706
+CCT,Crystal Clear ,707
+HBN,HoboNickels,708
+STARS,StarCash Network,709
+OTX,Octanox,710
+XPD,PetroDollar,711
+TTC,TittieCoin,712
+NKA,IncaKoin,713
+NUKO,Nekonium,714
+PIGGY,Piggycoin,715
+POST,PostCoin,716
+LANA,LanaCoin,717
+BLAS,BlakeStar,718
+BUCKS,SwagBucks,719
+NYAN,Nyancoin,720
+ENT,Eternity,721
+DRXNE,DROXNE,722
+AIB,Advanced Internet Blocks,723
+PXC,Phoenixcoin,724
+HPC,Happycoin,725
+VISIO,Visio,726
+WHL,WhaleCoin,727
+XBL,Billionaire Token,728
+ARI,Aricoin,729
+ACC,AdCoin,730
+HTC,HitCoin,731
+AMMO,Ammo Reloaded,732
+POS,PoSToken,733
+GB,GoldBlocks,734
+TRUMP,TrumpCoin,735
+TIT,Titcoin,736
+AMBER,AmberCoin,737
+WTT,Giga Watt Token,738
+888,OctoCoin,739
+SUPER,SuperCoin,740
+SIGT,Signatum,741
+DSH,Dashcoin,742
+NEWB,Newbium,743
+CUBE,DigiCube,744
+XJO,Joulecoin,745
+CJ,Cryptojacks,746
+CV2,Colossuscoin V2,747
+HERO,Sovereign Hero,748
+UNIC,UniCoin,749
+8BIT,8Bit,750
+XHI,HiCoin,751
+CRX,Chronos,752
+ZCG,Zlancer,753
+MOJO,MojoCoin,754
+LNK,Link Platform,755
+FUNC,FUNCoin,756
+RBT,Rimbit,757
+RED,RedCoin,758
+SLG,Sterlingcoin,759
+XGR,GoldReserve,760
+HNC,Helleniccoin,761
+PAK,Pakcoin,762
+UNY,Unity Ingot,763
+KUSH,KushCoin,764
+CCN,CannaCoin,765
+PR,Prototanium,766
+ARG,Argentum,767
+ONX,Onix,768
+C2,Coin2.1,769
+OPAL,Opal,770
+ETHD,Ethereum Dark,771
+XPY,PayCoin,772
+CHAN,ChanCoin,773
+BITZ,Bitz,774
+TGC,Tigercoin,775
+BLOCKPAY,BlockPay,776
+BXT,BitTokens,777
+MNC,Mincoin,778
+GRIM,Grimcoin,779
+ICN,iCoin,780
+CNO,Coin(O),781
+JIN,Jin Coin,782
+COAL,BitCoal,783
+DDF,DigitalDevelopersFund,784
+TAG,TagCoin,785
+BTWTY,Bit20,786
+CXT,Coinonat,787
+KED,Darsek,788
+PCOIN,Pioneer Coin,789
+BCF,Bitcoin Fast,790
+SRC,SecureCoin,791
+RLT,RouletteToken,792
+XCT,C-Bit,793
+XRE,RevolverCoin,794
+KAYI,Kayicoin,795
+DIX,Dix Asset,796
+MNM,Mineum,797
+BRAT,BROTHER,798
+SDRN,Senderon,799
+IMS,Independent Money System,800
+LTB,LiteBar,801
+EOT,EOT Token,802
+EMD,Emerald Crypto,803
+VOT,VoteCoin,804
+BITBTC,bitBTC,805
+LCP,Litecoin Plus,806
+DUO,ParallelCoin,807
+TSE,Tattoocoin (Standard Edition),808
+EVIL,Evil Coin,809
+FLY,Flycoin,810
+NTO,Fujinto,811
+BERN,BERNcash,812
+ZZC,ZoZoCoin,813
+SOON,SoonCoin,814
+EUC,Eurocoin,815
+BOLI,Bolivarcoin,816
+SWING,Swing,817
+611,SixEleven,818
+SONG,SongCoin,819
+ZUR,Zurcoin,820
+GAP,Gapcoin,821
+CON,PayCon,822
+CHESS,ChessCoin,823
+LBTC,LiteBitcoin,824
+DLC,Dollarcoin,825
+XRA,Ratecoin,826
+MOTO,Motocoin,827
+MARS,Marscoin,828
+BAS,BitAsean,829
+DALC,Dalecoin,830
+MAR,Marijuanacoin,831
+BIGUP,BigUp,832
+UNITS,GameUnits,833
+EBCH,eBitcoinCash,834
+PXI,Prime-XI,835
+STV,Sativacoin,836
+TRDT,Trident Group,837
+ARCO,AquariusCoin,838
+YTN,YENTEN,839
+CNNC,Cannation,840
+HXX,Hexx,841
+BSTY,GlobalBoost-Y,842
+CAT,Catcoin,843
+BTPL,Bitcoin Planet,844
+SPACE,SpaceCoin,845
+SCRT,SecretCoin,846
+QCN,QuazarCoin,847
+HONEY,Honey,848
+RPC,RonPaulCoin,849
+EVO,Evotion,850
+MAO,Mao Zedong,851
+KRONE,Kronecoin,852
+BITGOLD,bitGold,853
+BRIA,BriaCoin,854
+GP,GoldPieces,855
+ERY,Eryllium,856
+EGAS,ETHGAS,857
+BITSILVER,bitSilver,858
+ICOB,ICOBID,859
+EAGLE,EagleCoin,860
+XCRE,Creatio,861
+CACH,CacheCoin,862
+GPL,Gold Pressed Latinum,863
+XVP,Virtacoinplus,864
+SOIL,SOILcoin,865
+GPU,GPU Coin,866
+BTG,Bitgem,867
+ARB,ARbit,868
+FRC,Freicoin,869
+CPN,CompuCoin,870
+GLT,GlobalToken,871
+BUMBA,BumbaCoin,872
+TEK,TEKcoin,873
+TALK,BTCtalkcoin,874
+NEVA,NevaCoin,875
+VC,VirtualCoin,876
+XCO,X-Coin,877
+$$$,Money,878
+SFC,Solarflarecoin,879
+MAY,Theresa May Coin,880
+FLAX,Flaxscript,881
+DRS,Digital Rupees,882
+BIP,BipCoin,883
+MST,MustangCoin,884
+BLN,Bolenum,885
+300,300 Token,886
+REE,ReeCoin,887
+ACOIN,Acoin,888
+SPT,Spots,889
+ECO,EcoCoin,890
+NRO,Neuro,891
+FUZZ,FuzzBalls,892
+LTCU,LiteCoin Ultra,893
+USDE,USDe,894
+IMX,Impact,895
+NTWK,Network Token,896
+ALL,Allion,897
+BENJI,BenjiRolls,898
+GTC,Global Tour Coin,899
+AERM,Aerium,900
+CMT,Comet,901
+EXN,ExchangeN,902
+OFF,Cthulhu Offerings,903
+MAD,SatoshiMadness,904
+RUPX,Rupaya,905
+LUNA,Luna Coin,906
+DBTC,Debitcoin,907
+ACP,AnarchistsPrime,908
+TAJ,TajCoin,909
+BOAT,BOAT,910
+MSCN,Master Swiscoin,911
+BNX,BnrtxCoin,912
+KNC,KingN Coin,913
+GCC,GuccioneCoin,914
+ASAFE2,AllSafe,915
+XCS,CybCSec,916
+XBTS,Beatcoin,917
+HMP,HempCoin,918
+BITEUR,bitEUR,919
+UET,Useless Ethereum Token,920
+XNG,Enigma,921
+URO,Uro,922
+ZMC,ZetaMicron,923
+ICON,Iconic,924
+WOMEN,WomenCoin,925
+QBC,Quebecoin,926
+DIBC,DIBCOIN,927
+ATX,Artex Coin,928
+SLEVIN,Slevin,929
+SOCC,SocialCoin,930
+PRX,Printerium,931
+TOKEN,SwapToken,932
+SKC,Skeincoin,933
+GEERT,GeertCoin,934
+RSGP,RSGPcoin,935
+PRC,PRCoin,936
+CAB,Cabbage,937
+VLTC,Vault Coin,938
+IBANK,iBank,939
+VPRC,VapersCoin,940
+PLACO,PlayerCoin,941
+LTCR,Litecred,942
+DOLLAR,Dollar Online,943
+STEPS,Steps,944
+ROOFS,Roofs,945
+MILO,MiloCoin,946
+JS,JavaScript Token,947
+BSTAR,Blackstar,948
+VOLT,Bitvolt,949
+CTIC3,Coimatic 3.0,950
+CRDNC,Credence Coin,951
+TAGR,TAGRcoin,952
+VRS,Veros,953
+NANOX,Project-X,954
+ZNE,Zonecoin,955
+ORLY,Orlycoin,956
+CTIC2,Coimatic 2.0,957
+BIOB,BioBar,958
+ARGUS,Argus,959
+COUPE,Coupecoin,960
+ULA,Ulatech,961
+LVPS,LevoPlus,962
+FXE,FuturXe,963
+CREVA,CrevaCoin,964
+XRC,Rawcoin,965
+MGM,Magnum,966
+GSR,GeyserCoin,967
+CONX,Concoin,968
+CALC,CaliphCoin,969
+TSTR,Tristar Coin,970
+HMC,HarmonyCoin,971
+EBT,Ebittree Coin,972
+DMB,Digital Money Bits,973
+BCAP,BCAP,974
+ARC,Arcade Token,975
+PGL,Prospectors Gold,976
+SWIFT,Bitswift,977
+XLC,LeviarCoin,978
+JNS,Janus,979
+INPAY,InPay,980
+CRYPT,CryptCoin,981
+FIMK,FIMKrypto,982
+STRC,StarCredits,983
+CORG,CorgiCoin,984
+LOG,Woodcoin,985
+BUN,BunnyCoin,986
+I0C,I0Coin,987
+CASINO,Casino,988
+USC,Ultimate Secure Cash,989
+TRK,Truckcoin,990
+YASH,YashCoin,991
+PASL,Pascal Lite,992
+BPC,Bitpark Coin,993
+B@,Bankcoin,994
+METAL,MetalCoin,995
+808,808Coin,996
+BRIT,BritCoin,997
+SHORTY,Shorty,998
+ROC,Rasputin Online Coin,999
+VTA,Virtacoin,1e3
+STS,Stress,1001
+UNI,Universe,1002
+RMC,Remicoin,1003
+FNC,FinCoin,1004
+BTSR,BTSR,1005
+VAL,Valorbit,1006
+RBIES,Rubies,1007
+GBC,GBCGoldCoin,1008
+WAY,WayGuide,1009
+QTL,Quatloo,1010
+GLC,GlobalCoin,1011
+J,Joincoin,1012
+CYP,Cypher,1013
+BTQ,BitQuark,1014
+FIRE,Firecoin,1015
+SHDW,Shadow Token,1016
+CASH,Cashcoin,1017
+PX,PX,1018
+GRT,Grantcoin,1019
+COXST,CoExistCoin,1020
+VUC,Virta Unique Coin,1021
+SPEX,SproutsExtreme,1022
+E4ROW,E4ROW,1023
+SLING,Sling,1024
+FRK,Franko,1025
+WMC,WMCoin,1026
+SAC,SACoin,1027
+XBTC21,Bitcoin 21,1028
+ICE,iDice,1029
+TOR,Torcoin,1030
+YAC,Yacoin,1031
+EREAL,eREAL,1032
+LEA,LeaCoin,1033
+YEL,Yellow Token,1034
+ISL,IslaCoin,1035
+BOST,BoostCoin,1036
+WORM,HealthyWormCoin,1037
+CF,Californium,1038
+ANTI,AntiBitcoin,1039
+DLISK,DAPPSTER,1040
+RBX,Ripto Bux,1041
+VEC2,VectorAI,1042
+BLRY,BillaryCoin,1043
+VIP,VIP Tokens,1044
+ADCN,Asiadigicoin,1045
+PIE,PIECoin,1046
+CTO,Crypto,1047
+GBT,GameBet Coin,1048
+BVC,BeaverCoin,1049
+JWL,Jewels,1050
+WARP,WARP,1051
+MTLMC3,Metal Music Coin,1052
+PULSE,Pulse,1053
+BSC,BowsCoin,1054
+BRAIN,Braincoin,1055
+PLNC,PLNcoin,1056
+ZYD,Zayedcoin,1057
+DRM,Dreamcoin,1058
+MTM,MTMGaming,1059
+SH,Shilling,1060
+CWXT,CryptoWorldX Token,1061
+FLVR,FlavorCoin,1062
+BIOS,BiosCrypto,1063
+MND,MindCoin,1064
+PEX,PosEx,1065
+JOBS,JobsCoin,1066
+SCS,Speedcash,1067
+WBB,Wild Beast Block,1068
+RIDE,Ride My Car,1069
+EGO,EGO,1070
+URC,Unrealcoin,1071
+PONZI,PonziCoin,1072
+TYCHO,Tychocoin,1073
+G3N,G3N,1074
+DES,Destiny,1075
+HVCO,High Voltage,1076
+CRT,CRTCoin,1077
+ELS,Elysium,1078
+LIR,LetItRide,1079
+XOC,Xonecoin,1080
+SANDG,Save and Gain,1081
+P7C,P7Coin,1082
+IMPS,ImpulseCoin,1083
+CESC,CryptoEscudo,1084
+OS76,OsmiumCoin,1085
+QBK,Qibuck Asset,1086
+ALTC,Antilitecoin,1087
+CRTM,Corethum,1088
+SDP,SydPak,1089
+AGLC,AgrolifeCoin,1090
+NODC,NodeCoin,1091
+LEX,Lex4All,1092
+SLFI,Selfiecoin,1093
+SOJ,Sojourn,1094
+CFC,CoffeeCoin,1095
+CCM100,CCMiner,1096
+DGCS,Digital Credits,1097
+OCEAN,BurstOcean,1098
+PIZZA,PizzaCoin,1099
+ABN,Abncoin,1100
+APW,AppleCoin,1101
+ATMC,ATMCoin,1102
+IOST,IOStoken,1103
+SHOW,Show,1104
+INT,Internet Node Token,1105
+BCD,Bitcoin Diamond,1106
+SWFTC,SwftCoin,1107
+GNX,Genaro Network,1108
+SMT,SmartMesh,1109
+WIC,WaykiChain,1110
+GTC,Game,1112
+AIDOC,AI Doctor,1113
+BCX,BitcoinX,1114
+BTO,Bottos,1115
+HPB,High Performance Blockchain,1116
+KEY,Selfkey,1117
+LCT,LendConnect,1118
+TSL,Energo,1119
+TOPC,TopChain,1120
+AMM,MicroMoney,1121
+SBTC,Super Bitcoin,1122
+MOT,Olympus Labs,1123
+KCASH,Kcash,1124
+CAN,CanYaCoin,1125
+QBT,Qbao,1126
+XTZ,Tezos (Pre-Launch),1127
+BCA,Bitcoin Atom [Futures],1128
+IGNIS,Ignis,1129
+KBR,Kubera Coin,1130
+HPY,Hyper Pay,1131
+CMS,COMSA [ETH],1132
+MOAC,MOAC,1133
+EKO,EchoLink,1134
+HTML,HTMLCOIN,1135
+FRGC,Fargocoin,1136
+UBTC,United Bitcoin,1137
+UGC,ugChain,1138
+SPHTX,SophiaTX,1139
+CAPP,Cappasity,1140
+CMS,COMSA [XEM],1141
+FAIR,FairGame,1142
+B2X,SegWit2x,1144
+AIX,Aigang,1145
+VIU,Viuly,1146
+RNT,OneRoot Network,1147
+AWR,AWARE,1148
+UGT,UG Token,1149
+FIL,Filecoin [Futures],1150
+XIN,Mixin,1151
+AI,POLY AI,1153
+MKR,Maker,1154
+HBC,HomeBlockCoin,1155
+BIG,BigONE Token,1156
+EDT,EtherDelta Token,1157
+BDG,BitDegree,1158
+XSTC,Safe Trade Coin,1159
+IFC,Infinitecoin,1160
+REBL,Rebellious,1161
+TEL,Telcoin,1162
+EAG,EA Coin,1163
+CL,Coinlancer,1164
+INF,InfChain,1165
+NMS,Numus,1166
+MDT,Measurable Data Token,1167
+DAV,DavorCoin,1168
+SWTC,Jingtum Tech,1169
+BSR,BitSoar,1170
+ATN,ATN,1171
+LLT,LLToken,1172
+TER,TerraNova,1173
+SHND,StrongHands,1174
+POLIS,Polis,1175
+QUBE,Qube,1176
+CLUB,ClubCoin,1177
+CFUN,CFun,1178
+CYDER,Cyder,1179
+AIT,AICHAIN,1180
+IDT,InvestDigital,1181
+ZAP,Zap,1182
+KB3,KB3Coin,1183
+DIM,DIMCOIN,1184
+GRX,GOLD Reward Token,1185
+UQC,Uquid Coin,1186
+BTE,BitSerial,1187
+LBTC,Lightning Bitcoin [Futures],1188
+XIN,Infinity Economics,1189
+XID,Sphre AIR ,1190
+HAC,Hackspace Capital,1191
+HTML5,HTML5COIN,1192
+TCT,TokenClub,1193
+FDX,FidentiaX,1194
+WETH,WETH,1195
+SBC,StrikeBitClub,1196
+BKX,Bankex,1197
+TOK,Tokugawa,1199
+VZT,Vezt,1200
+CEFS,CryptopiaFeeShares,1201
+UTT,United Traders Token,1202
+SXDT,Spectre.ai Dividend Token,1203
+CLD,Cloud,1204
+BTCA,Bitair,1205
+ESC,Escroco,1206
+TOKC,TOKYO,1207
+GOD,Bitcoin God,1208
+KRM,Karma,1210
+GBG,Golos Gold,1211
+GET,GET Protocol,1212
+MAGE,MagicCoin,1213
+THS,TechShares,1214
+STAR,Starbase,1215
+NEOG,NEO GOLD,1216
+OPC,OP Coin,1217
+SIC,Swisscoin,1218
+BCDN,BlockCDN,1219
+GCS,GameChain System,1220
+BOS,BOScoin,1221
+MSD,MSD,1222
+IC,Ignition,1223
+SXUT,Spectre.ai Utility Token,1224
+SUR,Suretly,1225
+MCI,Musiconomi,1226
+LEV,Leverj,1227
+SJCX,Storjcoin X,1228
+LTG,LiteCoin Gold,1229
+PRN,Protean,1230
+CPAY,Cryptopay,1231
+EXRN,EXRNchain,1232
+GJC,Global Jobcoin,1233
+KZC,Kzcash,1234
+VASH,VPNCoin,1235
+ZBC,Zilbercoin,1236
+SISA,SISA,1237
+WOW,Wowcoin,1238
+HIGH,High Gain,1239
+PEC,Peacecoin,1240
+SFE,SafeCoin,1241
+FAP,FAPcoin,1242
+ZENGOLD,ZenGold,1243
+IQT,iQuant,1244
+PLX,PlexCoin,1245
+TCOIN,T-coin,1246
+PNX,Phantomx,1247
+PLC,PlusCoin,1248
+CASH,Cash Poker Pro,1249
+CAN,Content and AD Network,1250
+SIGMA,SIGMAcoin,1251
+RCN,Rcoin,1252
+TRIA,Triaconta,1253
+NUMUS,NumusCash,1254
+GOLF,Golfcoin,1255
+SHA,SHACoin,1256
+ACES,Aces,1257
+MDC,Madcoin,1258
+DASHS,Dashs,1259
+ETT,EncryptoTel [ETH],1260
+NIMFA,Nimfamoney,1261
+INDIA,India Coin,1262
+ZSE,ZSEcoin,1263
+TURBO,TurboCoin,1264
+ANTX,Antimatter,1265
+TLE,Tattoocoin (Limited Edition),1266
+XTD,XTD Coin,1267
+SAK,Sharkcoin,1268
+BTCM,BTCMoon,1269
+ANI,Animecoin,1270
+VULC,Vulcano,1271
+PCN,PeepCoin,1272
+ELITE,Ethereum Lite,1273
+HDLB,HODL Bucks,1274
+APC,AlpaCoin,1275
+GAY,GAY Money,1276
+FAZZ,Fazzcoin,1277
+FUDD,DimonCoin,1278
+DAY,Chronologic,1279
+DMC,DynamicCoin,1280
+WIC,Wi Coin,1281
+BXC,Bitcedi,1282
+BLAZR,BlazerCoin,1283
+SKR,Sakuracoin,1284
+EGOLD,eGold,1285
+UR,UR,1286
+FRN,Francs,1287
+GRN,Granite,1288
+PDG,PinkDog,1289
+EVR,Everus,1290
+IRL,IrishCoin,1291
+MAGN,Magnetcoin,1292
+BEST,BestChain,1293
+AKY,Akuya Coin,1294
+MCR,Macro,1295
+EDRC,EDRCoin,1296
+FONZ,Fonziecoin,1297
+BITOK,Bitok,1298
+MTX,Matryx,1299
+MGC,MergeCoin,1300
+ELC,Elacoin,1301
+ABC,Alphabit,1302
+SND,Sand Coin,1303
+BTC2X,Bitcoin2x,1304
+RYZ,ANRYZE,1305
+ASN,Aseancoin,1306
+GAIN,UGAIN,1307
+MARX,MarxCoin,1308
+REGA,Regacoin,1309
+UNRC,UniversalRoyalCoin,1310
+COR,CORION,1311
+LDCN,LandCoin,1312
+QBT,Cubits,1313
+BTCS,Bitcoin Silver,1314
+MINEX,Minex,1315
+CSC,CasinoCoin,1316
+GBRC,Global Business Revolution,1317
+HALLO,Halloween Coin,1318
+TODAY,TodayCoin,1319
+DON,Donationcoin,1320
+DEUS,DeusCoin,1321
+BTBC,Bitbase,1322
+LEEK,Leek Coin,1323
+RUNNERS,Runners,1324
+FLAP,FlappyCoin,1325
+GLS,GlassCoin,1326
+PRES,President Trump,1327
+IBTC,iBTC,1328
+BSN,Bastonet,1329
+SCT,Soma,1330
+EVC,EventChain,1331
+PRIMU,Primulon,1332
+MMXVI,MMXVI,1333
+HNC,Huncoin,1334
+LEPEN,LePen,1335
+UAHPAY,UAHPay,1336
+NTC,Natcoin,1337
+PCS,Pabyosi Coin (Special),1338
+ACN,Avoncoin,1339
+BIT,First Bitcoin,1340
+BET,BetaCoin,1341
+SKULL,Pirate Blocks,1342
+WSX,WeAreSatoshi,1343
+NBIT,netBit,1344
+RUBIT,RubleBit,1345
+UNC,UNCoin,1346
+HCC,Happy Creator Coin,1347
+XQN,Quotient,1348
+WINK,Wink,1349
+TELL,Tellurion,1350
+KASHH,KashhCoin,1351
+BLX,Blockchain Index,1352
+BIRDS,Birds,1353
+XDE2,XDE II,1354
+EUSD,eUSD,1355
+MONEY,MoneyCoin,1356
+XVE,The Vegan Initiative,1357
+CME,Cashme,1358
+CC,CyberCoin,1359
+DCRE,DeltaCredits,1360
+QORA,Qora,1361
+AV,AvatarCoin,1362
+KARMA,Karmacoin,1363
+OMC,Omicron,1364
+SWP,Swapcoin,1365
+DBG,Digital Bullion Gold,1366
+DUTCH,Dutch Coin,1367
+MAVRO,Mavro,1368
+PAYP,PayPeer,1369
+LKC,LinkedCoin,1370
+TERA,TeraCoin,1371
+TEAM,TeamUp,1372
+CHEAP,Cheapcoin,1373
+POKE,PokeCoin,1374
+HYPER,Hyper,1375
+LTH,LAthaan,1376
+STEX,STEX,1377
+SHELL,ShellCoin,1378
+DISK,DarkLisk,1379
+WA,WA Space,1380
+RUPX,Rupaya [OLD],1381
+CYC,Cycling Coin,1382
+EGG,EggCoin,1383
+FFC,FireFlyCoin,1384
+BAC,BitAlphaCoin,1385
+GMX,GoldMaxCoin,1386
+10MT,10M Token,1387
+ADK,Aidos Kuneen,1388
+CBD,CBD Crystals,1389
+OP,Operand,1390
+ELTC2,eLTC,1391
+YES,Yescoin,1392
+TOPAZ,Topaz Coin,1393
+OX,OX Fina,1394
+MONETA,Moneta,1395
+TCR,TheCreed,1396
+FRWC,FrankyWillCoin,1397
+FC,Facecoin,1398
+VOYA,Voyacoin,1399
+ROYAL,RoyalCoin,1400
+IPY,Infinity Pay,1401
+LAZ,Lazaruscoin,1402
+X2,X2,1403
+GML,GameLeagueCoin,1404
+SPORT,SportsCoin,1405
+IVZ,InvisibleCoin,1406
+TRICK,TrickyCoin,1407
+PRM,PrismChain,1408
+NAMO,NamoCoin,1409
+UTA,UtaCoin,1410
+RICHX,RichCoin,1411
+BUB,Bubble,1412
+MEN,PeopleCoin,1413
+PSY,Psilocybin,1414
+XAU,Xaucoin,1415
+AXIOM,Axiom,1416
+XID,International Diamond,1417
+TESLA,TeslaCoilCoin,1418
+DUB,Dubstep,1419
+HYTV,Hyper TV,1420
+GUC,GoldUnionCoin,1421
+OPES,Opescoin,1422
+MBL,MobileCash,1423
+RHFC,RHFCoin,1424
+SNAKE,SnakeEyes,1425
+FID,BITFID,1426
+TOP,TopCoin,1427
+FUTC,FutCoin,1428
+GARY,President Johnson,1429
+XOT,Internet of Things,1430
+CMP,Compcoin,1431
+BITCF,First Bitcoin Capital,1432
+WC,WINCOIN,1433
+OCOW,OCOW,1434
+9COIN,9COIN,1435
+BT1,BT1 [CST],1436
+BT2,BT2 [CST],1437
+EBIT,eBIT,1438
+FBL,Faceblock,1439
+ENT,ENTCash,1441
