@@ -28,14 +28,14 @@ data <- raw.data %>%
 
 trends <- gtrendsR::gtrends(c("Bitcoin", "Ethereum", "Litecoin", "Coinbase", "Cryptocurrency")) 
 
-test <- data.frame(trends$interest_over_time) %>% 
+trends <- data.frame(trends$interest_over_time) %>% 
   mutate(date = as.Date(date)) %>% 
   select(date, keyword, hits) %>% 
   mutate(keyword = paste0('google_', tolower(keyword))) %>% 
   spread(keyword, hits) %>% 
-  full_join(tibble(date = as.Date(data$date))) %>% 
-  fill(.)
-
+  full_join(tibble(date = seq.Date(min(.$date), max(.$date), "days"))) %>% 
+  arrange(date) %>% 
+  fill(contains("google"))
 
 data <- left_join(data, trends, by = 'date')
 
@@ -114,6 +114,26 @@ ggplot(data)+
   geom_line(aes(date, ETH_close))
 
 cor(data$ETH_close, data$pred.lm.spread, use = 'complete.obs')
+
+# Google trends
+mod.trends <-lm(ETH_close ~
+                  lag(google_bitcoin) +
+                  lag(google_coinbase) +
+                  lag(google_ethereum) +
+                  lag(google_litecoin) +
+                  lag(google_cryptocurrency),
+                data=data, na.action="na.omit")
+
+summary(mod.trends)
+
+data <- data %>% 
+  add_predictions(mod.trends, var = 'pred.lm.trends')
+
+ggplot(data)+
+  geom_line(aes(date, pred.lm.trends), color = 'red') +
+  geom_line(aes(date, ETH_close))
+
+cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 
 # Ensemble 
 ens.lm <- lm(ETH_close ~ 
