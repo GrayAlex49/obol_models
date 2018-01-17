@@ -15,7 +15,10 @@ info <- raw.data %>%
 
 write_csv(info, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_symbolInfo.csv' ))
 
+# raw.data <- readRDS("./data/2018_0116_rawData.RDS")
+
 data <- raw.data %>%
+  mutate(date = as.Date(date)) %>% 
   filter(ranknow < 20) %>%
   select(-slug, -ranknow, -name) %>%
   gather(key, value, -date, -symbol) %>%
@@ -25,11 +28,14 @@ data <- raw.data %>%
 
 trends <- gtrendsR::gtrends(c("Bitcoin", "Ethereum", "Litecoin", "Coinbase", "Cryptocurrency")) 
 
-trends <- data.frame(trends$interest_over_time) %>% 
+test <- data.frame(trends$interest_over_time) %>% 
   mutate(date = as.Date(date)) %>% 
   select(date, keyword, hits) %>% 
   mutate(keyword = paste0('google_', tolower(keyword))) %>% 
-  spread(keyword, hits)
+  spread(keyword, hits) %>% 
+  full_join(tibble(date = as.Date(data$date))) %>% 
+  fill(.)
+
 
 data <- left_join(data, trends, by = 'date')
 
