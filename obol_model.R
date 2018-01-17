@@ -45,9 +45,11 @@ saveRDS(data, paste0('./data/',format(max(data$date), "%Y_%m%d"), '_modelDataset
 
 data <- readRDS("./data/2018_0116_modelDataset.RDS")
 
-test <- data[,c("date", str_subset(names(data), "ETH"))] %>% 
+eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>% 
   na.omit(.)
 
+train.data <- data %>% 
+  filter(date < as.Date("2017-10-01"))
 ### Simple Liniar -----------------------------------------
 
 # I'm doing what I know how to do here but my thought is take the measures that 
@@ -62,7 +64,7 @@ mod.close <-lm(ETH_close ~
            lag(XRP_close) +
            lag(BCH_close) +
            lag(LTC_close),
-         data=data, na.action="na.omit")
+         data=train.data, na.action="na.omit")
 
 summary(mod.close)
 
@@ -82,7 +84,7 @@ mod.vol <-lm(ETH_close ~
                  lag(XRP_volume) +
                  lag(BCH_volume) +
                  lag(LTC_volume),
-               data=data, na.action="na.omit")
+               data=train.data, na.action="na.omit")
 
 summary(mod.vol)
 
@@ -102,7 +104,7 @@ mod.spread <-lm(ETH_close ~
                 lag(XRP_spread) +
                 lag(BCH_spread) +
                 lag(LTC_spread),
-              data=data, na.action="na.omit")
+              data=train.data, na.action="na.omit")
 
 summary(mod.spread)
 
@@ -122,7 +124,7 @@ mod.trends <-lm(ETH_close ~
                   lag(google_ethereum) +
                   lag(google_litecoin) +
                   lag(google_cryptocurrency),
-                data=data, na.action="na.omit")
+                data=train.data, na.action="na.omit")
 
 summary(mod.trends)
 
@@ -139,7 +141,8 @@ cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 ens.lm <- lm(ETH_close ~ 
                pred.lm.close +
                pred.lm.volume +
-               pred.lm.spread,
+               pred.lm.spread +
+               pred.lm.trends,
              data = data, na.action = 'na.omit'
 )
 
