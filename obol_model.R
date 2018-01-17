@@ -50,7 +50,8 @@ eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>%
 
 train.data <- data %>% 
   filter(date < as.Date("2017-10-01"))
-### Simple Liniar -----------------------------------------
+
+### Simple Liniar Components -------------------------------
 
 # I'm doing what I know how to do here but my thought is take the measures that 
 # make sense to me for the currencies trading on coinbase (+ ripple) and throw them
@@ -137,7 +138,7 @@ ggplot(data)+
 
 cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 
-# Ensemble 
+### Ensemble ----------------------------------------------------
 ens.lm <- lm(ETH_close ~ 
                pred.lm.close +
                pred.lm.volume +
@@ -151,11 +152,14 @@ summary(ens.lm)
 data <- data %>%
   add_predictions(ens.lm, var="pred.ens.lm")
 
-model.predictions <- data %>% 
-  select(date, ETH_close, contains("pred."))
-
 cor(data$ETH_close, data$pred.ens.lm, use = 'complete.obs')
 
 ggplot(data)+
   geom_line(aes(date, pred.ens.lm), color = 'red') +
   geom_line(aes(date, ETH_close))
+
+### Model Evaluation --------------------------------------------
+
+model.predictions <- data %>% 
+  select(date, ETH_close, contains("pred."))
+
