@@ -5,3 +5,5 @@ Automated Trading Strategies in R - http://www.rpubs.com/johnakwei/207852
 Packages to look into - TTR, PerformanceAnalytics, Backtest
 
 ARIMA+GARCH Trading Strategy on the S&P500 Stock Market Index Using R  - https://www.quantstart.com/articles/ARIMA-GARCH-Trading-Strategy-on-the-SP500-Stock-Market-Index-Using-R
+
+How I'm calculating returns - https://www.r-bloggers.com/an-example-of-a-trading-strategy-coded-in-r/

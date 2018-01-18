@@ -172,6 +172,14 @@ ggplot(data)+
 model.predictions <- data %>% 
   select(date, ETH_close, contains("pred."))
 
+test <- model.predictions %>% 
+  select(date, ETH_close, pred.ens.lm) %>% 
+  na.omit() %>% 
+  mutate(base = c(NA, diff(ETH_close))) %>% 
+  mutate(model = c(NA, diff(pred.ens.lm))) %>% 
+  mutate(direction.match = if_else(sign(base) == sign(model), 1, 0)) %>% 
+  mutate(magnitude = abs(base - model))
+
 ### Trading Strategies -----------------------------------------
 
 trade.direction <- function(x){
@@ -182,6 +190,15 @@ trade.direction <- function(x){
   trade <- c(NA, if_else(diff(x) > 0, 1, 0))
   
   return(trade)
+}
+
+trade.macd <- function(x){
+  # This does not really use the models, its a strategy typically applied to 
+  # the raw series.  I've taken the lag out though so if it is not applied
+  # to a prediction it would need to be lagged.
+  temp <-  data.frame(MACD(x))
+  signal <- ifelse(temp$macd < temp$signal, 0, 1)
+  return(signal)
 }
 
 ### Return Evaluation ------------------------------------------
