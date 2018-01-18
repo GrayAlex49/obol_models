@@ -147,7 +147,7 @@ ggplot(data)+
 
 cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 
-### Ensemble ----------------------------------------------------
+### Ensembles ---------------------------------------------------
 ens.lm <- lm(ETH_close ~ 
                pred.lm.close +
                pred.lm.volume +
@@ -172,3 +172,35 @@ ggplot(data)+
 model.predictions <- data %>% 
   select(date, ETH_close, contains("pred."))
 
+### Trading Strategies -----------------------------------------
+
+trade.direction <- function(x){
+  # The simplest strategy I can think of is if the model is predicting lower
+  # than it did the day before, be out of the market and if it is predicting
+  # higher, be in the market.  
+  
+  trade <- c(NA, if_else(diff(x) > 0, 1, 0))
+  
+  return(trade)
+}
+
+### Return Evaluation ------------------------------------------
+library(quantmod)
+library(TTR)
+
+# These calculate the base return and then the return for one trading 
+# strategy.  We'll want to put it in a function so each strategy can
+# be applied to each model.
+
+test <- model.predictions %>% 
+  filter(date > as.Date("2017-10-01")) %>% 
+  mutate(base.returns = ROC(ETH_close)) %>% 
+  replace_na(list(base.returns = 0)) %>% 
+  mutate(base.returns = exp(cumsum(base.returns)))
+
+test <- model.predictions %>% 
+  filter(date > as.Date("2017-10-01")) %>% 
+  mutate(ens.lm.return = trade.direction(pred.ens.lm)) %>% 
+  mutate(ens.lm.return = ROC(ETH_close)*ens.lm.return) %>% 
+  replace_na(list(ens.lm.return = 0)) %>% 
+  mutate(ens.lm.return = exp(cumsum(ens.lm.return)))

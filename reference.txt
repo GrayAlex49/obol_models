@@ -1,0 +1,7 @@
+List Of R Package for Back-testing Quantitative Trading Strategies - https://www.linkedin.com/pulse/20141124133216-78438968-list-of-r-package-for-back-testing-quantitative-trading-strategies/
+
+Automated Trading Strategies in R - http://www.rpubs.com/johnakwei/207852
+
+Packages to look into - TTR, PerformanceAnalytics, Backtest
+
+ARIMA+GARCH Trading Strategy on the S&P500 Stock Market Index Using R  - https://www.quantstart.com/articles/ARIMA-GARCH-Trading-Strategy-on-the-SP500-Stock-Market-Index-Using-R
