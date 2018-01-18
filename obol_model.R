@@ -51,6 +51,15 @@ eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>%
 train.data <- data %>% 
   filter(date < as.Date("2017-10-01"))
 
+### Synthetic Variables ------------------------------------
+
+temp <- data %>% 
+  mutate_if(is.numeric, funs(zoo::rollmean(., k = 3, fill = NA, align = 'right'))) %>% 
+  rename_if(is.numeric, funs(paste0(., '_roll3')))
+
+data <- data %>% 
+  left_join(temp)
+
 ### Simple Liniar Components -------------------------------
 
 # I'm doing what I know how to do here but my thought is take the measures that 
