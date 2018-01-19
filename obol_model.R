@@ -12,15 +12,20 @@ eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>%
 
 ### Synthetic Variables ------------------------------------
 
-temp <- data %>% 
+data <- data %>% 
   mutate_if(is.numeric, funs(zoo::rollmean(., k = 3, fill = NA, align = 'right'))) %>% 
-  rename_if(is.numeric, funs(paste0(., '_roll3')))
+  rename_if(is.numeric, funs(paste0(., '_roll3'))) %>% 
+  left_join(data, .)
 
 data <- data %>% 
-  left_join(temp)
+  mutate_if(is.numeric, funs(c(NA, if_else(diff(.)>0, 1, 0)))) %>% 
+  rename_if(is.numeric, funs(paste0(., '_dir'))) %>% 
+  left_join(data, .)
 
-data.direction <- data %>% 
-  mutate_if(is.numeric, funs(c(NA, if_else(diff(ETH_close)>0, 1, 0))))
+data <- data %>% 
+  mutate_if(is.numeric, funs(c(NA, diff(.)))) %>% 
+  rename_if(is.numeric, funs(paste0(., '_diff'))) %>% 
+  left_join(data, .)
   
 train.data <- data %>% 
   filter(date < sample.cutoff)
@@ -39,14 +44,14 @@ mod.close <-lm(ETH_close ~
            lag(XRP_close) +
            lag(BCH_close) +
            lag(LTC_close),
-         data=train.data, na.action="na.omit")
+         data=data.dif, na.action="na.omit")
 
 summary(mod.close)
 
 data <- data %>% 
   add_predictions(mod.close, var = 'pred.lm.close')
 
-ggplot(data)+
+ggplot(data.dif)+
   geom_line(aes(date, pred.lm.close), color = 'red') +
   geom_line(aes(date, ETH_close))
 
