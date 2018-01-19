@@ -1,55 +1,12 @@
 library(tidyverse)
 library(modelr)
 
-
-### Pull Data -----------------------------------------------
-library(crypto)
-
-# This takes a while so I've saved it out 
-raw.data <- getCoins()
-
-saveRDS(raw.data, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_rawData.RDS' ))
-
-info <- raw.data %>%
-  distinct(symbol, name, ranknow)
-
-write_csv(info, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_symbolInfo.csv' ))
-
-# raw.data <- readRDS("./data/2018_0116_rawData.RDS")
-
-data <- raw.data %>%
-  mutate(date = as.Date(date)) %>% 
-  filter(ranknow < 20) %>%
-  select(-slug, -ranknow, -name) %>%
-  gather(key, value, -date, -symbol) %>%
-  unite(key, symbol, key) %>%
-  spread(key, value) %>%
-  arrange(date)
-
-trends <- gtrendsR::gtrends(c("Bitcoin", "Ethereum", "Litecoin", "Coinbase", "Cryptocurrency")) 
-
-trends <- data.frame(trends$interest_over_time) %>% 
-  mutate(date = as.Date(date)) %>% 
-  select(date, keyword, hits) %>% 
-  mutate(keyword = paste0('google_', tolower(keyword))) %>% 
-  spread(keyword, hits) %>% 
-  full_join(tibble(date = seq.Date(min(.$date), max(.$date), "days"))) %>% 
-  arrange(date) %>% 
-  fill(contains("google"))
-
-data <- left_join(data, trends, by = 'date')
-
-saveRDS(data, paste0('./data/',format(max(data$date), "%Y_%m%d"), '_modelDataset.RDS' ))
-
 ### Load Data --------------------------------------------
 
 data <- readRDS("./data/2018_0116_modelDataset.RDS")
 
 eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>% 
   na.omit(.)
-
-train.data <- data %>% 
-  filter(date < as.Date("2017-10-01"))
 
 ### Synthetic Variables ------------------------------------
 
@@ -59,6 +16,12 @@ temp <- data %>%
 
 data <- data %>% 
   left_join(temp)
+
+data <- data %>% 
+  mutate(ETH_close_direction = c(NA, if_else(diff(ETH_close)>0, 1, 0)))
+
+train.data <- data %>% 
+  filter(date < as.Date("2017-10-01"))
 
 ### Simple Liniar Components -------------------------------
 
@@ -147,6 +110,23 @@ ggplot(data)+
 
 cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 
+
+### Binomial Liniar Components ----------------------------------
+
+# For right now, the most important metric is direction so we may as well
+# model that directly
+
+mod.close.direction <-glm(ETH_close_direction ~
+                 lag(ETH_close) +
+                 lag(BTC_close) +
+                 lag(XRP_close) +
+                 lag(BCH_close) +
+                 lag(LTC_close),
+               data=train.data, na.action="na.omit", family = "binomial")
+
+summary(mod.close.direction)
+
+
 ### Ensembles ---------------------------------------------------
 ens.lm <- lm(ETH_close ~ 
                pred.lm.close +
@@ -179,6 +159,9 @@ test <- model.predictions %>%
   mutate(model = c(NA, diff(pred.ens.lm))) %>% 
   mutate(direction.match = if_else(sign(base) == sign(model), 1, 0)) %>% 
   mutate(magnitude = abs(base - model))
+
+sum(test$direction.match, na.rm = T) / sum(!is.na(test$direction.match))
+summary(test$magnitude)
 
 ### Trading Strategies -----------------------------------------
 
