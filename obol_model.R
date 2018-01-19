@@ -1,6 +1,8 @@
 library(tidyverse)
 library(modelr)
 
+sample.cutoff <- as.Date("2017-10-01")
+
 ### Load Data --------------------------------------------
 
 data <- readRDS("./data/2018_0116_modelDataset.RDS")
@@ -17,11 +19,11 @@ temp <- data %>%
 data <- data %>% 
   left_join(temp)
 
-data <- data %>% 
-  mutate(ETH_close_direction = c(NA, if_else(diff(ETH_close)>0, 1, 0)))
-
+data.direction <- data %>% 
+  mutate_if(is.numeric, funs(c(NA, if_else(diff(ETH_close)>0, 1, 0))))
+  
 train.data <- data %>% 
-  filter(date < as.Date("2017-10-01"))
+  filter(date < sample.cutoff)
 
 ### Simple Liniar Components -------------------------------
 
@@ -116,13 +118,13 @@ cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 # For right now, the most important metric is direction so we may as well
 # model that directly
 
-mod.close.direction <-glm(ETH_close_direction ~
+mod.close.direction <-glm(ETH_close ~
                  lag(ETH_close) +
                  lag(BTC_close) +
                  lag(XRP_close) +
                  lag(BCH_close) +
                  lag(LTC_close),
-               data=train.data, na.action="na.omit", family = "binomial")
+               data=data.direction, na.action="na.omit", family = "binomial")
 
 summary(mod.close.direction)
 
@@ -147,21 +149,43 @@ ggplot(data)+
   geom_line(aes(date, pred.ens.lm), color = 'red') +
   geom_line(aes(date, ETH_close))
 
+
 ### Model Evaluation --------------------------------------------
 
 model.predictions <- data %>% 
   select(date, ETH_close, contains("pred."))
 
-test <- model.predictions %>% 
-  select(date, ETH_close, pred.ens.lm) %>% 
-  na.omit() %>% 
-  mutate(base = c(NA, diff(ETH_close))) %>% 
-  mutate(model = c(NA, diff(pred.ens.lm))) %>% 
-  mutate(direction.match = if_else(sign(base) == sign(model), 1, 0)) %>% 
-  mutate(magnitude = abs(base - model))
+model.eval <- function(data, dv, pred){
+  pred <- enquo(pred)
+  dv <- enquo(dv)
+  
+  test <- data %>% 
+    select(date, !!dv, !!pred) %>% 
+    na.omit() %>% 
+    mutate(base = c(NA, diff(!!dv))) %>% 
+    mutate(model = c(NA, diff(!!pred))) %>% 
+    mutate(direction.match = if_else(sign(base) == sign(model), 1, 0)) %>% 
+    mutate(magnitude = abs(base - model))
+  
+  data.frame(
+    model = quo_name(pred),
+    direction.match = sum(test$direction.match, na.rm = T) / sum(!is.na(test$direction.match)),
+    magnitude.avg = mean(test$magnitude, na.rm = T),
+    magnitude.sd = sd(test$magnitude, na.rm = T),
+    magnitude.max = max(test$magnitude, na.rm = T)
+  )
+  
+}
+# 
+# test <- data.frame()
+# for(i in str_subset(names(model.predictions), "lm")){
+#   temp <- model.eval(model.predictions, ETH_close, UQE(i))
+#   test <- rbind(test, temp)
+# }
+# 
+# map(model.predictions, ~model.eval(model.predictions, ETH_close, .x))
 
-sum(test$direction.match, na.rm = T) / sum(!is.na(test$direction.match))
-summary(test$magnitude)
+
 
 ### Trading Strategies -----------------------------------------
 
@@ -193,13 +217,13 @@ library(TTR)
 # be applied to each model.
 
 test <- model.predictions %>% 
-  filter(date > as.Date("2017-10-01")) %>% 
+  filter(date > sample.cutoff) %>% 
   mutate(base.returns = ROC(ETH_close)) %>% 
   replace_na(list(base.returns = 0)) %>% 
   mutate(base.returns = exp(cumsum(base.returns)))
 
 test <- model.predictions %>% 
-  filter(date > as.Date("2017-10-01")) %>% 
+  filter(date > sample.cutoff) %>% 
   mutate(ens.lm.return = trade.direction(pred.ens.lm)) %>% 
   mutate(ens.lm.return = ROC(ETH_close)*ens.lm.return) %>% 
   replace_na(list(ens.lm.return = 0)) %>% 
