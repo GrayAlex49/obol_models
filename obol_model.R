@@ -12,23 +12,27 @@ eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>%
 
 ### Synthetic Variables ------------------------------------
 
-data <- data %>% 
+data.roll <- data %>% 
   mutate_if(is.numeric, funs(zoo::rollmean(., k = 3, fill = NA, align = 'right'))) %>% 
-  rename_if(is.numeric, funs(paste0(., '_roll3'))) %>% 
-  left_join(data, .)
+  rename_if(is.numeric, funs(paste0(., '_roll3'))) 
 
-data <- data %>% 
+data.direction <- data %>% 
   mutate_if(is.numeric, funs(c(NA, if_else(diff(.)>0, 1, 0)))) %>% 
-  rename_if(is.numeric, funs(paste0(., '_dir'))) %>% 
-  left_join(data, .)
+  rename_if(is.numeric, funs(paste0(., '_dir')))
+
+data.diff <- data %>% 
+  mutate_if(is.numeric, funs(c(NA, diff(.)))) %>% 
+  rename_if(is.numeric, funs(paste0(., '_diff')))
 
 data <- data %>% 
-  mutate_if(is.numeric, funs(c(NA, diff(.)))) %>% 
-  rename_if(is.numeric, funs(paste0(., '_diff'))) %>% 
-  left_join(data, .)
+  left_join(data.roll) %>% 
+  left_join(data.direction) %>% 
+  left_join(data.diff)
   
 train.data <- data %>% 
   filter(date < sample.cutoff)
+
+rm(data.roll, data.diff, data.direction)
 
 ### Simple Liniar Components -------------------------------
 
@@ -123,13 +127,13 @@ cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
 # For right now, the most important metric is direction so we may as well
 # model that directly
 
-mod.close.direction <-glm(ETH_close ~
-                 lag(ETH_close) +
-                 lag(BTC_close) +
-                 lag(XRP_close) +
-                 lag(BCH_close) +
-                 lag(LTC_close),
-               data=data.direction, na.action="na.omit", family = "binomial")
+mod.close.direction <-glm(ETH_close_dir ~
+                 lag(ETH_close_dir) +
+                 lag(BTC_close_dir) +
+                 lag(XRP_close_dir) +
+                 lag(BCH_close_dir) +
+                 lag(LTC_close_dir),
+               data=data, na.action="na.omit", family = "binomial")
 
 summary(mod.close.direction)
 
