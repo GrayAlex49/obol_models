@@ -34,7 +34,7 @@ train.data <- data %>%
 
 rm(data.roll, data.diff, data.direction)
 
-### Simple Liniar Components -------------------------------
+### Liniar Point Components -------------------------------
 
 # I'm doing what I know how to do here but my thought is take the measures that 
 # make sense to me for the currencies trading on coinbase (+ ripple) and throw them
@@ -42,27 +42,23 @@ rm(data.roll, data.diff, data.direction)
 # something will be more robust but I figure this is a decent place to start.
 
 # Simple one day lag close price of top currencies 
-mod.close <-lm(ETH_close ~
+mod.point.lm.close <-lm(ETH_close ~
            lag(ETH_close) +
            lag(BTC_close) +
            lag(XRP_close) +
            lag(BCH_close) +
            lag(LTC_close),
-         data=data.dif, na.action="na.omit")
+         data=train.data, na.action="na.omit")
 
-summary(mod.close)
+summary(mod.point.lm.close)
 
 data <- data %>% 
-  add_predictions(mod.close, var = 'pred.lm.close')
+  add_predictions(mod.point.lm.close, var = 'pred.point.lm.close')
 
-ggplot(data.dif)+
-  geom_line(aes(date, pred.lm.close), color = 'red') +
-  geom_line(aes(date, ETH_close))
-
-cor(data$ETH_close, data$pred.lm.close, use = 'complete.obs')
+cor(data$ETH_close, data$pred.point.lm.close, use = 'complete.obs')
 
 # We'll want to include volume somehow 
-mod.vol <-lm(ETH_close ~
+mod.point.lm.vol <-lm(ETH_close ~
                  lag(ETH_volume) +
                  lag(BTC_volume) +
                  lag(XRP_volume) +
@@ -70,19 +66,15 @@ mod.vol <-lm(ETH_close ~
                  lag(LTC_volume),
                data=train.data, na.action="na.omit")
 
-summary(mod.vol)
+summary(mod.point.lm.vol)
 
 data <- data %>% 
-  add_predictions(mod.vol, var = 'pred.lm.volume')
+  add_predictions(mod.point.lm.vol, var = 'pred.point.lm.volume')
 
-ggplot(data)+
-  geom_line(aes(date, pred.lm.volume), color = 'red') +
-  geom_line(aes(date, ETH_close))
-
-cor(data$ETH_close, data$pred.lm.volume, use = 'complete.obs')
+cor(data$ETH_close, data$pred.point.lm.volume, use = 'complete.obs')
 
 # This gets at the volitility information 
-mod.spread <-lm(ETH_close ~
+mod.point.lm.spread <-lm(ETH_close ~
                 lag(ETH_spread) +
                 lag(BTC_spread) +
                 lag(XRP_spread) +
@@ -90,19 +82,15 @@ mod.spread <-lm(ETH_close ~
                 lag(LTC_spread),
               data=train.data, na.action="na.omit")
 
-summary(mod.spread)
+summary(mod.point.lm.spread)
 
 data <- data %>% 
-  add_predictions(mod.spread, var = 'pred.lm.spread')
+  add_predictions(mod.point.lm.spread, var = 'pred.point.lm.spread')
 
-ggplot(data)+
-  geom_line(aes(date, pred.lm.spread), color = 'red') +
-  geom_line(aes(date, ETH_close))
-
-cor(data$ETH_close, data$pred.lm.spread, use = 'complete.obs')
+cor(data$ETH_close, data$pred.point.lm.spread, use = 'complete.obs')
 
 # Google trends
-mod.trends <-lm(ETH_close ~
+mod.point.lm.trends <-lm(ETH_close ~
                   lag(google_bitcoin) +
                   lag(google_coinbase) +
                   lag(google_ethereum) +
@@ -110,24 +98,20 @@ mod.trends <-lm(ETH_close ~
                   lag(google_cryptocurrency),
                 data=train.data, na.action="na.omit")
 
-summary(mod.trends)
+summary(mod.point.lm.trends)
 
 data <- data %>% 
-  add_predictions(mod.trends, var = 'pred.lm.trends')
+  add_predictions(mod.point.lm.trends, var = 'pred.point.lm.trends')
 
-ggplot(data)+
-  geom_line(aes(date, pred.lm.trends), color = 'red') +
-  geom_line(aes(date, ETH_close))
-
-cor(data$ETH_close, data$pred.lm.trends, use = 'complete.obs')
+cor(data$ETH_close, data$pred.point.lm.trends, use = 'complete.obs')
 
 
-### Binomial Liniar Components ----------------------------------
+### Liniar Binomial Components ----------------------------------
 
 # For right now, the most important metric is direction so we may as well
 # model that directly
 
-mod.close.direction <-glm(ETH_close_dir ~
+mod.binom.lm.close <-glm(ETH_close_dir ~
                  lag(ETH_close_dir) +
                  lag(BTC_close_dir) +
                  lag(XRP_close_dir) +
@@ -135,34 +119,128 @@ mod.close.direction <-glm(ETH_close_dir ~
                  lag(LTC_close_dir),
                data=data, na.action="na.omit", family = "binomial")
 
-summary(mod.close.direction)
+summary(mod.binom.lm.close)
 
+data <- data %>%
+  add_predictions(mod.binom.lm.close, var="pred.binom.lm.close")
+
+cor(data$ETH_close_dir, data$pred.binom.lm.close, use = 'complete.obs')
+
+### Liniar Difference Components --------------------------------
+
+# This is really what we are after, difference in price 
+
+# Simple one day lag close price of top currencies 
+mod.diff.lm.close <-lm(ETH_close_diff ~
+                          lag(ETH_close_diff) +
+                          lag(BTC_close_diff) +
+                          lag(XRP_close_diff) +
+                          lag(BCH_close_diff) +
+                          lag(LTC_close_diff),
+                        data=train.data, na.action="na.omit")
+
+summary(mod.diff.lm.close)
+
+data <- data %>% 
+  add_predictions(mod.diff.lm.close, var = 'pred.diff.lm.close')
+
+cor(data$ETH_close_diff, data$pred.diff.lm.close, use = 'complete.obs')
+
+# We'll want to include volume somehow 
+mod.diff.lm.vol <-lm(ETH_close_diff ~
+                        lag(ETH_volume_diff) +
+                        lag(BTC_volume_diff) +
+                        lag(XRP_volume_diff) +
+                        lag(BCH_volume_diff) +
+                        lag(LTC_volume_diff),
+                      data=train.data, na.action="na.omit")
+
+summary(mod.diff.lm.vol)
+
+data <- data %>% 
+  add_predictions(mod.diff.lm.vol, var = 'pred.diff.lm.volume')
+
+cor(data$ETH_close_diff, data$pred.diff.lm.volume, use = 'complete.obs')
+
+# This gets at the volitility information 
+mod.diff.lm.spread <-lm(ETH_close_diff ~
+                           lag(ETH_spread_diff) +
+                           lag(BTC_spread_diff) +
+                           lag(XRP_spread_diff) +
+                           lag(BCH_spread_diff) +
+                           lag(LTC_spread_diff),
+                         data=train.data, na.action="na.omit")
+
+summary(mod.diff.lm.spread)
+
+data <- data %>% 
+  add_predictions(mod.diff.lm.spread, var = 'pred.diff.lm.spread')
+
+cor(data$ETH_close_diff, data$pred.diff.lm.spread, use = 'complete.obs')
+
+# Google trends
+mod.diff.lm.trends <-lm(ETH_close_diff ~
+                           lag(google_bitcoin) +
+                           lag(google_coinbase) +
+                           lag(google_ethereum) +
+                           lag(google_litecoin) +
+                           lag(google_cryptocurrency),
+                         data=train.data, na.action="na.omit")
+
+summary(mod.diff.lm.trends)
+
+data <- data %>% 
+  add_predictions(mod.diff.lm.trends, var = 'pred.diff.lm.trends')
+
+cor(data$ETH_close_diff, data$pred.diff.lm.trends, use = 'complete.obs')
 
 ### Ensembles ---------------------------------------------------
-ens.lm <- lm(ETH_close ~ 
-               pred.lm.close +
-               pred.lm.volume +
-               pred.lm.spread +
-               pred.lm.trends,
+
+# Ensemble of Liniar Point Models
+ens.point.lm <- lm(ETH_close ~ 
+                     pred.point.lm.close +
+                     pred.point.lm.volume +
+                     pred.point.lm.spread +
+                     pred.point.lm.trends,
              data = data, na.action = 'na.omit'
 )
 
-summary(ens.lm)
+summary(ens.point.lm)
 
 data <- data %>%
-  add_predictions(ens.lm, var="pred.ens.lm")
+  add_predictions(ens.point.lm, var="pred.ens.point.lm")
 
-cor(data$ETH_close, data$pred.ens.lm, use = 'complete.obs')
+cor(data$ETH_close, data$pred.ens.point.lm, use = 'complete.obs')
 
 ggplot(data)+
-  geom_line(aes(date, pred.ens.lm), color = 'red') +
+  geom_line(aes(date, pred.ens.point.lm), color = 'red') +
   geom_line(aes(date, ETH_close))
+
+# Ensemble of Liniar Difference Models
+ens.diff.lm <- lm(ETH_close_diff ~ 
+                    pred.diff.lm.close +
+                    pred.diff.lm.volume +
+                    pred.diff.lm.spread +
+                    pred.diff.lm.trends,
+                   data = data, na.action = 'na.omit'
+)
+
+summary(ens.diff.lm)
+
+data <- data %>%
+  add_predictions(ens.diff.lm, var="pred.ens.diff.lm")
+
+cor(data$ETH_close_diff, data$pred.ens.diff.lm, use = 'complete.obs')
+
+ggplot(data)+
+  geom_line(aes(date, pred.ens.diff.lm), color = 'red') +
+  geom_line(aes(date, ETH_close_diff))
 
 
 ### Model Evaluation --------------------------------------------
 
 model.predictions <- data %>% 
-  select(date, ETH_close, contains("pred."))
+  select(date, ETH_close, ETH_close_diff, contains("pred."))
 
 model.eval <- function(data, dv, pred){
   pred <- enquo(pred)
@@ -185,14 +263,13 @@ model.eval <- function(data, dv, pred){
   )
   
 }
-# 
-# test <- data.frame()
-# for(i in str_subset(names(model.predictions), "lm")){
-#   temp <- model.eval(model.predictions, ETH_close, UQE(i))
-#   test <- rbind(test, temp)
-# }
-# 
-# map(model.predictions, ~model.eval(model.predictions, ETH_close, .x))
+
+test <- data.frame()
+for(i in str_subset(names(model.predictions), "point")){
+  temp <- model.eval(model.predictions, ETH_close, get(i))
+  test <- rbind(test, temp)
+}
+
 
 
 
