@@ -24,15 +24,20 @@ data.diff <- data %>%
   mutate_if(is.numeric, funs(c(NA, diff(.)))) %>% 
   rename_if(is.numeric, funs(paste0(., '_diff')))
 
+data.diff.roll <- data.diff %>% 
+  mutate_if(is.numeric, funs(c(NA, diff(.)))) %>% 
+  rename_if(is.numeric, funs(paste0(., '_roll3')))
+
 data <- data %>% 
   left_join(data.roll) %>% 
   left_join(data.direction) %>% 
-  left_join(data.diff)
+  left_join(data.diff) %>% 
+  left_join(data.diff.roll)
   
 train.data <- data %>% 
   filter(date < sample.cutoff)
 
-rm(data.roll, data.diff, data.direction)
+rm(data.roll, data.diff, data.direction, data.diff.roll)
 
 ### Liniar Point Components -------------------------------
 

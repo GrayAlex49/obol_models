@@ -10,3 +10,4 @@ How I'm calculating returns - https://www.r-bloggers.com/an-example-of-a-trading
 
 Long term model idea - The FundStrat cofounder Tom Lee says: "If you build a very simple model valuing bitcoin as the square function number of users times the average transaction value, 94% of the bitcoin movement over the past four years is explained by that equation." http://www.businessinsider.com/bitcoin-price-movement-explained-by-one-equation-fundstrat-tom-lee-metcalf-law-network-effect-2017-10
 
+Deep learning of financial forecast - http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0180944
