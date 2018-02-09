@@ -1,5 +1,6 @@
 library(tidyverse)
 library(crypto)
+library(quantmod)
 
 raw.data <- getCoins()
 
@@ -21,6 +22,7 @@ data <- raw.data %>%
   spread(key, value) %>%
   arrange(date)
 
+# Google Trends
 trends <- gtrendsR::gtrends(c("Bitcoin", "Ethereum", "Litecoin", "Coinbase", "Cryptocurrency")) 
 
 trends <- data.frame(trends$interest_over_time) %>% 
@@ -33,5 +35,20 @@ trends <- data.frame(trends$interest_over_time) %>%
   fill(contains("google"))
 
 data <- left_join(data, trends, by = 'date')
+
+# Market Data
+getSymbols(c("^IXIC", "^GSPC"))
+
+GSPC <- data.frame(date = index(GSPC), GSPC)
+IXIC <- data.frame(date = index(IXIC), IXIC)
+
+market <- GSPC %>% 
+  full_join(IXIC, by = 'date') %>% 
+  as.tibble() %>% 
+  full_join(tibble(date = seq.Date(min(.$date), max(.$date), "days"))) %>% 
+  arrange(date) %>% 
+  fill(everything())
+
+data <- left_join(data, market, by = 'date')
 
 saveRDS(data, paste0('./data/',format(max(data$date), "%Y_%m%d"), '_modelDataset.RDS' ))
