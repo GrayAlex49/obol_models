@@ -28,6 +28,7 @@ trends <- gtrendsR::gtrends(c("Bitcoin", "Ethereum", "Litecoin", "Coinbase", "Cr
 trends <- data.frame(trends$interest_over_time) %>% 
   mutate(date = as.Date(date)) %>% 
   select(date, keyword, hits) %>% 
+  mutate(hits = as.numeric(hits)) %>% 
   mutate(keyword = paste0('google_', tolower(keyword))) %>% 
   spread(keyword, hits) %>% 
   full_join(tibble(date = seq.Date(min(.$date), max(.$date), "days"))) %>% 
