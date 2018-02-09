@@ -5,7 +5,7 @@ sample.cutoff <- as.Date("2017-12-01")
 
 ### Load Data --------------------------------------------
 
-data <- readRDS("./data/2018_0116_modelDataset.RDS")
+data <- readRDS("./data/2018_0208_modelDataset.RDS")
 
 eth.data <- data[,c("date", str_subset(names(data), "ETH"))] %>% 
   na.omit(.)
