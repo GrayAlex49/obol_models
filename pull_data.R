@@ -11,7 +11,7 @@ info <- raw.data %>%
 
 write_csv(info, paste0('./data/', format(max(raw.data$date), "%Y_%m%d"), '_symbolInfo.csv' ))
 
-# raw.data <- readRDS("./data/2018_0116_rawData.RDS")
+# raw.data <- readRDS("./data/2018_0208_rawData.RDS")
 
 data <- raw.data %>%
   mutate(date = as.Date(date)) %>% 

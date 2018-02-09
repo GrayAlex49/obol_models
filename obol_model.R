@@ -1,7 +1,7 @@
 library(tidyverse)
 library(modelr)
 
-sample.cutoff <- as.Date("2017-10-01")
+sample.cutoff <- as.Date("2017-12-01")
 
 ### Load Data --------------------------------------------
 
